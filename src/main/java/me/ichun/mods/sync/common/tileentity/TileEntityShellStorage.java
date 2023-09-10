@@ -53,10 +53,6 @@ public class TileEntityShellStorage extends TileEntityDualVertical<TileEntityShe
             {
                 playerInstance = createPlayer(world, playerUUID, playerName);
                 prevPlayerName = playerName;
-                if(playerNBT.hasKey("Inventory"))
-                {
-                    playerInstance.readFromNBT(playerNBT);
-                }
                 world.notifyNeighborsOfStateChange(pos, world.getBlockState(pos).getBlock(), true);
             }
         }
